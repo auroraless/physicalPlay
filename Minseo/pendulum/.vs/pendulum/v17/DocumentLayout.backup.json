@@ -1,10 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\physicalPlay\\Minseo\\pendulum\\",
+  "WorkspaceRootPath": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|c:\\users\\user\\desktop\\physicalplay\\minseo\\pendulum\\pendulum\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|d:\\zuoye\\git\\tt\\minseo\\pendulum\\pendulum\\wire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|solutionrelative:pendulum\\wire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|d:\\zuoye\\git\\tt\\minseo\\pendulum\\pendulum\\circuitcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|solutionrelative:pendulum\\circuitcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|d:\\zuoye\\git\\tt\\minseo\\pendulum\\pendulum\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|solutionrelative:pendulum\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|d:\\zuoye\\git\\tt\\minseo\\pendulum\\pendulum\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|solutionrelative:pendulum\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|d:\\zuoye\\git\\tt\\minseo\\pendulum\\pendulum\\circuitanalyzer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|solutionrelative:pendulum\\circuitanalyzer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|d:\\zuoye\\git\\tt\\minseo\\pendulum\\pendulum\\resistorcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|solutionrelative:pendulum\\resistorcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|d:\\zuoye\\git\\tt\\minseo\\pendulum\\pendulum\\switchcomponen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|solutionrelative:pendulum\\switchcomponen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|d:\\zuoye\\git\\tt\\minseo\\pendulum\\pendulum\\voltagesourcecomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|solutionrelative:pendulum\\voltagesourcecomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|d:\\zuoye\\git\\tt\\minseo\\pendulum\\pendulum\\sliderresistorcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|solutionrelative:pendulum\\sliderresistorcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|d:\\zuoye\\git\\tt\\minseo\\pendulum\\pendulum\\bulbcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|solutionrelative:pendulum\\bulbcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|d:\\zuoye\\git\\tt\\minseo\\pendulum\\pendulum\\circuitcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A0EB5F1-9D21-4445-89E9-B68E239F1FBB}|pendulum\\pendulum.csproj|solutionrelative:pendulum\\circuitcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,23 +54,149 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\physicalPlay\\Minseo\\pendulum\\pendulum\\Form1.cs",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\Form1.cs",
               "RelativeDocumentMoniker": "pendulum\\Form1.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\physicalPlay\\Minseo\\pendulum\\pendulum\\Form1.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "pendulum\\Form1.cs [\uB514\uC790\uC778]",
+              "ToolTip": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\Form1.cs",
+              "RelativeToolTip": "pendulum\\Form1.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAwwDgAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T09:38:41.602Z",
-              "EditorCaption": " [\uB514\uC790\uC778]"
+              "WhenOpened": "2025-05-10T18:52:35.406Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\Form1.cs",
+              "RelativeDocumentMoniker": "pendulum\\Form1.cs",
+              "ToolTip": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\Form1.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "pendulum\\Form1.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T18:51:47.553Z",
+              "EditorCaption": " [\u8BBE\u8BA1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CircuitCanvas.cs",
+              "DocumentMoniker": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\CircuitCanvas.cs",
+              "RelativeDocumentMoniker": "pendulum\\CircuitCanvas.cs",
+              "ToolTip": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\CircuitCanvas.cs",
+              "RelativeToolTip": "pendulum\\CircuitCanvas.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAAPYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T18:54:42.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Wire.cs",
+              "DocumentMoniker": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\Wire.cs",
+              "RelativeDocumentMoniker": "pendulum\\Wire.cs",
+              "ToolTip": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\Wire.cs",
+              "RelativeToolTip": "pendulum\\Wire.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T19:05:38.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CircuitAnalyzer.cs",
+              "DocumentMoniker": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\CircuitAnalyzer.cs",
+              "RelativeDocumentMoniker": "pendulum\\CircuitAnalyzer.cs",
+              "ToolTip": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\CircuitAnalyzer.cs",
+              "RelativeToolTip": "pendulum\\CircuitAnalyzer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T19:04:52.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ResistorComponent.cs",
+              "DocumentMoniker": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\ResistorComponent.cs",
+              "RelativeDocumentMoniker": "pendulum\\ResistorComponent.cs",
+              "ToolTip": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\ResistorComponent.cs",
+              "RelativeToolTip": "pendulum\\ResistorComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvycAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T19:07:16.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VoltageSourceComponent.cs",
+              "DocumentMoniker": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\VoltageSourceComponent.cs",
+              "RelativeDocumentMoniker": "pendulum\\VoltageSourceComponent.cs",
+              "ToolTip": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\VoltageSourceComponent.cs",
+              "RelativeToolTip": "pendulum\\VoltageSourceComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvyMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T19:06:26.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SliderResistorComponent.cs",
+              "DocumentMoniker": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\SliderResistorComponent.cs",
+              "RelativeDocumentMoniker": "pendulum\\SliderResistorComponent.cs",
+              "ToolTip": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\SliderResistorComponent.cs",
+              "RelativeToolTip": "pendulum\\SliderResistorComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T19:03:52.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SwitchComponen.cs",
+              "DocumentMoniker": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\SwitchComponen.cs",
+              "RelativeDocumentMoniker": "pendulum\\SwitchComponen.cs",
+              "ToolTip": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\SwitchComponen.cs",
+              "RelativeToolTip": "pendulum\\SwitchComponen.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T19:03:11.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BulbComponent.cs",
+              "DocumentMoniker": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\BulbComponent.cs",
+              "RelativeDocumentMoniker": "pendulum\\BulbComponent.cs",
+              "ToolTip": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\BulbComponent.cs",
+              "RelativeToolTip": "pendulum\\BulbComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvyMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T19:03:35.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CircuitComponent.cs",
+              "DocumentMoniker": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\CircuitComponent.cs",
+              "RelativeDocumentMoniker": "pendulum\\CircuitComponent.cs",
+              "ToolTip": "D:\\zuoye\\git\\tt\\Minseo\\pendulum\\pendulum\\CircuitComponent.cs",
+              "RelativeToolTip": "pendulum\\CircuitComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T18:53:59.887Z",
+              "EditorCaption": ""
             }
           ]
         }
