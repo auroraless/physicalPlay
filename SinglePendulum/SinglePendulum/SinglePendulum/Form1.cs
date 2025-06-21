@@ -2,19 +2,19 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SinglePendulum
+namespace TeamProject
 {
     public partial class Form1 : Form
     {
         private Timer timer;
-        private double angle;                   // 현재 각도 (라디안)
-        private double angle0 = 0;              // 초기 각도
+        private double angle;
+        private double angle0 = 0;
         private double time = 0;
         private double gravity = 9.81;
-        private double damping = 0.03;          // 감쇠 계수: 느리게 감쇠됨
+        private double damping = 0.03;
 
-        private double lengthMeters = 1.0;      // 물리적 줄 길이 (m)
-        private double lengthPixels = 200;      // 화면상 길이 (픽셀)
+        private double lengthMeters = 1.0;
+        private double lengthPixels = 200;
 
         private double originX, originY;
 
@@ -25,35 +25,119 @@ namespace SinglePendulum
         private bool passedZero = false;
         private double prevAngle = 0;
 
-        private ListBox logBox;
+        private Label labelInitAngle;
+        private Label labelInitSpeed;
+        private ListBox amplitudeBox;
         private Label labelAngle;
+        private Label statusLabel;
+        private Label physicsHintLabel;
+        private Button resetButton;
+        private Label massLabel;
+        private NumericUpDown massControl;
 
-        // 드래그 속도 측정용
         private DateTime lastMoveTime;
         private double lastMoveAngle;
         private double initialAngularVelocity = 0;
+
+        private double mass = 1.0;
+        private double previousMass = 1.0;
 
         public Form1()
         {
             InitializeComponent();
             this.DoubleBuffered = true;
             this.Width = 600;
-            this.Height = 600;
+            this.Height = 560;
 
             originX = this.Width / 2;
             originY = 100;
 
-            logBox = new ListBox();
-            logBox.Width = 200;
-            logBox.Height = 100;
-            logBox.Location = new Point(10, 10);
-            this.Controls.Add(logBox);
+            amplitudeBox = new ListBox();
+            amplitudeBox.Width = 200;
+            amplitudeBox.Height = 60;
+            amplitudeBox.Location = new Point(10, 10);
+            this.Controls.Add(amplitudeBox);
+
+            labelInitAngle = new Label();
+            labelInitAngle.Location = new Point(10, 80);
+            labelInitAngle.AutoSize = true;
+            labelInitAngle.Text = "초기 각도: 0.00°";
+            this.Controls.Add(labelInitAngle);
+
+            labelInitSpeed = new Label();
+            labelInitSpeed.Location = new Point(10, 100);
+            labelInitSpeed.AutoSize = true;
+            labelInitSpeed.Text = "초기 속도: 0.00 rad/s";
+            this.Controls.Add(labelInitSpeed);
 
             labelAngle = new Label();
-            labelAngle.Location = new Point(10, 120);
+            labelAngle.Location = new Point(10, 130);
             labelAngle.AutoSize = true;
             labelAngle.Text = "각도: 0.00°";
             this.Controls.Add(labelAngle);
+
+            statusLabel = new Label();
+            statusLabel.Location = new Point(10, 150);
+            statusLabel.AutoSize = true;
+            statusLabel.ForeColor = Color.DarkBlue;
+            statusLabel.Text = "";
+            this.Controls.Add(statusLabel);
+
+            physicsHintLabel = new Label();
+            physicsHintLabel.Location = new Point(10, 480);
+            physicsHintLabel.AutoSize = true;
+            physicsHintLabel.ForeColor = Color.DarkGreen;
+            physicsHintLabel.Text = "";
+            this.Controls.Add(physicsHintLabel);
+
+            massLabel = new Label();
+            massLabel.Location = new Point(470, 420);
+            massLabel.Size = new Size(100, 20);
+            massLabel.Text = "▼ 추 질량";
+            this.Controls.Add(massLabel);
+
+            massControl = new NumericUpDown();
+            massControl.Minimum = 1;
+            massControl.Maximum = 10;
+            massControl.DecimalPlaces = 1;
+            massControl.Increment = 0.1M;
+            massControl.Value = 1.0M;
+            massControl.Width = 100;
+            massControl.Location = new Point(470, 440);
+            massControl.ValueChanged += (s, e) =>
+            {
+                double newMass = (double)massControl.Value;
+                mass = newMass;
+                timer.Stop();
+                angle = 0;
+                dragAngle = 0;
+                lastMoveTime = DateTime.Now;
+                lastMoveAngle = angle;
+                initialAngularVelocity = 0;
+
+                labelAngle.Text = $"각도: 0.00°";
+                statusLabel.Text = "질량이 변경되었습니다. 다시 드래그하세요.";
+
+                if (newMass > previousMass)
+                {
+                    physicsHintLabel.Text = "질량이 무거워져도 진동 속도는 그대로지만, 오래 진동합니다.";
+                }
+                else if (newMass < previousMass)
+                {
+                    physicsHintLabel.Text = "질량이 가벼워져도 진동 속도는 그대로지만, 짧게 진동합니다.";
+                }
+
+                previousMass = newMass;
+                this.Invalidate();
+            };
+            this.Controls.Add(massControl);
+
+            resetButton = new Button();
+            resetButton.Text = "재시작";
+            resetButton.Width = 100;
+            resetButton.Location = new Point(470, 470);
+            resetButton.Click += ResetButton_Click;
+            this.Controls.Add(resetButton);
 
             timer = new Timer();
             timer.Interval = 16;
@@ -64,28 +148,48 @@ namespace SinglePendulum
             this.MouseUp += Form1_MouseUp;
         }
 
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+            timer.Stop();
+            angle = 0;
+            angle0 = 0;
+            time = 0;
+            dragAngle = 0;
+            isDragging = false;
+
+            prevAngle = 0;
+            lastZeroCrossTime = -1;
+            passedZero = false;
+
+            labelAngle.Text = "각도: 0.00°";
+            statusLabel.Text = "재시작되었습니다. 다시 드래그하세요.";
+            labelInitAngle.Text = "초기 각도: 0.00°";
+            labelInitSpeed.Text = "초기 속도: 0.00 rad/s";
+            amplitudeBox.Items.Clear();
+            physicsHintLabel.Text = "";
+            this.Invalidate();
+        }
+
         private void Timer_Tick(object sender, EventArgs e)
         {
             if (!isDragging)
             {
                 time += 0.016;
                 double omega = Math.Sqrt(gravity / lengthMeters);
+                double effectiveDamping = damping / mass;
 
-                // 감쇠 진자 공식 적용
-                angle = angle0 * Math.Exp(-damping * time) * Math.Cos(omega * time);
+                angle = angle0 * Math.Exp(-effectiveDamping * time) * Math.Cos(omega * time);
 
-                // 중심 통과 감지
                 if (prevAngle * angle < 0 && !passedZero)
                 {
                     passedZero = true;
 
                     if (lastZeroCrossTime >= 0)
                     {
-                        double amplitude = angle0 * Math.Exp(-damping * time); // 현재 진폭
+                        double amplitude = angle0 * Math.Exp(-damping * time);
                         double degrees = amplitude * (180.0 / Math.PI);
-                        logBox.Items.Add($"진폭: {degrees:F2}°");
-                        logBox.TopIndex = logBox.Items.Count - 1;
-
+                        amplitudeBox.Items.Add($"진폭: {degrees:F2}°");
+                        amplitudeBox.TopIndex = amplitudeBox.Items.Count - 1;
                     }
 
                     lastZeroCrossTime = time;
@@ -97,7 +201,6 @@ namespace SinglePendulum
                 }
 
                 prevAngle = angle;
-
                 this.Invalidate();
             }
         }
@@ -108,15 +211,12 @@ namespace SinglePendulum
             Graphics g = e.Graphics;
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 
-            // 🔹 지지대 기둥
             Pen supportPen = new Pen(Color.DarkSlateGray, 8);
             g.DrawLine(supportPen, (float)originX, 0, (float)originX, (float)originY);
 
-            // 🔹 고정 고리 반원
             RectangleF arcRect = new RectangleF((float)originX - 20, -20, 40, 40);
             g.DrawArc(new Pen(Color.DimGray, 3), arcRect, 0, 180);
 
-            // 🔹 진자 줄과 추
             Pen pen = new Pen(Color.Black, 2);
             Brush bobBrush = Brushes.DarkRed;
 
@@ -125,12 +225,9 @@ namespace SinglePendulum
             double y = originY + lengthPixels * Math.Cos(drawAngle);
 
             g.DrawLine(pen, (float)originX, (float)originY, (float)x, (float)y);
-
-            float radius = 20;
+            float radius = (float)(10 + mass * 5);
             g.FillEllipse(bobBrush, (float)(x - radius), (float)(y - radius), radius * 2, radius * 2);
         }
-
-
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -145,7 +242,6 @@ namespace SinglePendulum
                 isDragging = true;
                 timer.Stop();
 
-                // 초기화
                 lastMoveTime = DateTime.Now;
                 lastMoveAngle = angle;
                 initialAngularVelocity = 0;
@@ -161,11 +257,9 @@ namespace SinglePendulum
                 dragAngle = Math.Atan2(dx, dy);
                 this.Invalidate();
 
-                // 실시간 각도 표시
                 double degrees = dragAngle * (180.0 / Math.PI);
                 labelAngle.Text = $"각도: {degrees:F2}°";
 
-                // 각속도 추정
                 DateTime now = DateTime.Now;
                 TimeSpan delta = now - lastMoveTime;
                 if (delta.TotalMilliseconds > 0)
@@ -188,13 +282,13 @@ namespace SinglePendulum
                 time = 0;
                 lastZeroCrossTime = -1;
                 passedZero = false;
-                prevAngle = angle0 * Math.Cos(0);  // 초기 각도 저장
+                prevAngle = angle0 * Math.Cos(0);
 
                 double degrees = angle0 * (180.0 / Math.PI);
-                logBox.Items.Add($"초기 각도: {degrees:F2}°");
-                logBox.Items.Add($"초기 속도: {initialAngularVelocity:F2} rad/s");
-                logBox.Items.Add("----------------------------");
+                labelInitAngle.Text = $"초기 각도: {degrees:F2}°";
+                labelInitSpeed.Text = $"초기 속도: {initialAngularVelocity:F2} rad/s";
 
+                statusLabel.Text = "";
                 timer.Start();
             }
         }
