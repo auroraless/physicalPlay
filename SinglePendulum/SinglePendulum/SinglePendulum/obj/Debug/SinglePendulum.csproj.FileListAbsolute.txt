@@ -1,0 +1,9 @@
+C:\Users\User\Desktop\physicalPlay\SinglePendulum\SinglePendulum\SinglePendulum\bin\Debug\SinglePendulum.exe.config
+C:\Users\User\Desktop\physicalPlay\SinglePendulum\SinglePendulum\SinglePendulum\bin\Debug\SinglePendulum.exe
+C:\Users\User\Desktop\physicalPlay\SinglePendulum\SinglePendulum\SinglePendulum\bin\Debug\SinglePendulum.pdb
+C:\Users\User\Desktop\physicalPlay\SinglePendulum\SinglePendulum\SinglePendulum\obj\Debug\SinglePendulum.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\physicalPlay\SinglePendulum\SinglePendulum\SinglePendulum\obj\Debug\SinglePendulum.Properties.Resources.resources
+C:\Users\User\Desktop\physicalPlay\SinglePendulum\SinglePendulum\SinglePendulum\obj\Debug\SinglePendulum.csproj.GenerateResource.cache
+C:\Users\User\Desktop\physicalPlay\SinglePendulum\SinglePendulum\SinglePendulum\obj\Debug\SinglePendulum.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\physicalPlay\SinglePendulum\SinglePendulum\SinglePendulum\obj\Debug\SinglePendulum.exe
+C:\Users\User\Desktop\physicalPlay\SinglePendulum\SinglePendulum\SinglePendulum\obj\Debug\SinglePendulum.pdb
