@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new refraction.DoubleBufferedPanel();
-            this.cmbMaterial = new System.Windows.Forms.ComboBox();
-            this.lblResult = new System.Windows.Forms.Label();
-            this.lblText = new System.Windows.Forms.Label();
             this.lblText2 = new System.Windows.Forms.Label();
+            this.lblText = new System.Windows.Forms.Label();
+            this.lblResult = new System.Windows.Forms.Label();
+            this.cmbMaterial = new System.Windows.Forms.ComboBox();
+            this.btnMaterial = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnMaterial);
             this.panel1.Controls.Add(this.lblText2);
             this.panel1.Controls.Add(this.lblText);
             this.panel1.Controls.Add(this.lblResult);
@@ -52,6 +54,32 @@
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
+            // 
+            // lblText2
+            // 
+            this.lblText2.AutoSize = true;
+            this.lblText2.Location = new System.Drawing.Point(602, 488);
+            this.lblText2.Name = "lblText2";
+            this.lblText2.Size = new System.Drawing.Size(327, 15);
+            this.lblText2.TabIndex = 3;
+            this.lblText2.Text = "빨간색: 굴절선, 파란색: 입사선, 초록색: 반사선\r\n";
+            // 
+            // lblText
+            // 
+            this.lblText.AutoSize = true;
+            this.lblText.Location = new System.Drawing.Point(602, 151);
+            this.lblText.Name = "lblText";
+            this.lblText.Size = new System.Drawing.Size(47, 15);
+            this.lblText.TabIndex = 2;
+            this.lblText.Text = "결과: ";
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Location = new System.Drawing.Point(655, 151);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(0, 15);
+            this.lblResult.TabIndex = 1;
             // 
             // cmbMaterial
             // 
@@ -72,31 +100,15 @@
             this.cmbMaterial.TabIndex = 0;
             this.cmbMaterial.SelectedIndexChanged += new System.EventHandler(this.cmbMaterial_SelectedIndexChanged);
             // 
-            // lblResult
+            // btnMaterial
             // 
-            this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(655, 151);
-            this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(0, 15);
-            this.lblResult.TabIndex = 1;
-            // 
-            // lblText
-            // 
-            this.lblText.AutoSize = true;
-            this.lblText.Location = new System.Drawing.Point(602, 151);
-            this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(47, 15);
-            this.lblText.TabIndex = 2;
-            this.lblText.Text = "결과: ";
-            // 
-            // lblText2
-            // 
-            this.lblText2.AutoSize = true;
-            this.lblText2.Location = new System.Drawing.Point(602, 488);
-            this.lblText2.Name = "lblText2";
-            this.lblText2.Size = new System.Drawing.Size(327, 15);
-            this.lblText2.TabIndex = 3;
-            this.lblText2.Text = "빨간색: 굴절선, 파란색: 입사선, 초록색: 반사선\r\n";
+            this.btnMaterial.Location = new System.Drawing.Point(602, 183);
+            this.btnMaterial.Name = "btnMaterial";
+            this.btnMaterial.Size = new System.Drawing.Size(118, 38);
+            this.btnMaterial.TabIndex = 4;
+            this.btnMaterial.Text = "매질";
+            this.btnMaterial.UseVisualStyleBackColor = true;
+            this.btnMaterial.Click += new System.EventHandler(this.btnMaterial_Click);
             // 
             // Form1
             // 
@@ -119,6 +131,7 @@
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Label lblText;
         private System.Windows.Forms.Label lblText2;
+        private System.Windows.Forms.Button btnMaterial;
     }
 }
 
