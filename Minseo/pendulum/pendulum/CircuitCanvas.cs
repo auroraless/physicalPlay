@@ -10,6 +10,7 @@ namespace pendulum
 {
     public class CircuitCanvas : Panel
     {
+        private string formulaText = "";
         private List<CircuitComponent> components = new List<CircuitComponent>();
         private List<Wire> wires = new List<Wire>();
         //private string placingType = null;
@@ -79,6 +80,10 @@ namespace pendulum
             // 画所有元件
             foreach (var c in components)
                 c.Draw(e.Graphics);
+            if (!string.IsNullOrEmpty(formulaText))
+            {
+                e.Graphics.DrawString(formulaText, Font, Brushes.Blue, 10, Height - 30);
+            }
         }
 
         // 计算两点之间的欧几里得距离
@@ -125,23 +130,23 @@ namespace pendulum
                     slider.OnMouseUp();
             }
 
-            // 电路闭合判断 + 电流计算 + 灯泡亮度更新
             if (IsCircuitClosed())
             {
                 var analyzer = new CircuitAnalyzer(components);
-                analyzer.Compute();
+                formulaText = analyzer.Compute(); // 获取计算结果字符串
             }
             else
             {
-                // 电路未闭合，关闭所有灯泡亮度
                 foreach (var comp in components)
                 {
                     if (comp is BulbComponent bulb)
                         bulb.UpdateBrightness(0);
                 }
+
+                formulaText = "전기회로가 닫히지 않으면 전류를 계산할 수 없다。";
             }
 
-            Invalidate();
+            Invalidate(); // 触发重绘
         }
         public bool IsCircuitClosed()
         {
@@ -243,6 +248,13 @@ namespace pendulum
             return false;
         }
 
+        public void ClearAll()
+        {
+            components.Clear();
+            wires.Clear();
+            formulaText = "";
+            Invalidate(); // 重新绘制画布
+        }
 
     }
 }

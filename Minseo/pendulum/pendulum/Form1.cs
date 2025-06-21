@@ -54,10 +54,15 @@ namespace pendulum
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (canvas.IsCircuitClosed())
-                statusLabel.Text = "电路已闭合";
+                statusLabel.Text = "회로가 이미 닫혔다";
 
             else
-                statusLabel.Text = "电路未闭合";
+                statusLabel.Text = "회로가 닫히지 않았다";
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            canvas.ClearAll();
         }
     }
 }

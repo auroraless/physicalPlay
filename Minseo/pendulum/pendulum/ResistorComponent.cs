@@ -11,7 +11,7 @@ namespace pendulum
     {
         public ResistorComponent(Point position) : base(position)
         {
-            Value = 100.0; // 默认电阻值为 100Ω
+            Value = 10.0; // 默认电阻值为 100Ω
         }
 
         public override void Draw(Graphics g)
@@ -38,3 +38,4 @@ namespace pendulum
         }
     }
 }
+    

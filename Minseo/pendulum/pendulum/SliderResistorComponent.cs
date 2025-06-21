@@ -20,6 +20,10 @@ namespace pendulum
 
         public override void Draw(Graphics g)
         {
+            using (Brush fillBrush = new SolidBrush(Color.BurlyWood)) // 可以改为其他颜色
+            {
+                g.FillRectangle(fillBrush, sliderArea);
+            }
             g.DrawRectangle(Pens.Brown, sliderArea);
 
             // 显示当前电阻值
