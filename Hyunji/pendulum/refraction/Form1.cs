@@ -83,7 +83,7 @@ namespace refraction
 
             double dx = cx - incidentEnd.X;
             double dy = cy - incidentEnd.Y;
-            double theta1 = Math.Atan2(dx, dy); // 입사각 라디안
+            double theta1 = Math.Atan2(dx, dy); 
             double angleDeg = theta1 * 180 / Math.PI;
 
             double n1 = materialIndex["공기"];

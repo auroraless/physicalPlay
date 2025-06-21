@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1 = new refraction.DoubleBufferedPanel();
             this.cmbMaterial = new System.Windows.Forms.ComboBox();
             this.lblResult = new System.Windows.Forms.Label();
             this.lblText = new System.Windows.Forms.Label();
@@ -114,7 +114,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private refraction.DoubleBufferedPanel panel1;
         private System.Windows.Forms.ComboBox cmbMaterial;
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Label lblText;
